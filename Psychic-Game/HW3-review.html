@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us"></html>
+
+<head>
+    <meta charset="UTF-8">
+    <tittle>Pshychic Game</tittle>
+</head>
+
+<body>
+<h1>Coding Terms!</h1>
+<div class="game-guess"></div>
+<div class="game-computer-guess" ></div> 
+<div class="game-wins"></div>
+<div class="game-losses"></div>
+<div class="game-ties"></div>
+<div class="end"></div>
+
+<script type="text/javascript">
+document.write("");
+
+var userText=prompt("Guess What Coding Term I'm Thinking Of?")
+//array of comp choices//
+    var computerChoices=[ "attribute",  "variable", "element","property"]; 
+    var ties=0;
+    var looses=0;
+    var wins=0;
+
+var winsElement=document.getElementByID
+// determines users entered word might try to use "prompt"//
+document.onkeyup=function(event){
+        var userGuess= event.key;
+        var computerGuess= [(computerChoices.lenght)];
+        alert("User guess: " + userGuess);
+        alert("Computer guess: " + computerGuess);
+    }
+
+    if (userGuess==="attribute"||userGuess==="variable"||userGuess==="element"|| userGuess==="property"){
+if(userGuess===computerGuess){
+    ties==ties++;
+    endElement.textContent="TIE";}
+
+    else if (userGuess==="variable" && computerGuess==="element" && computerGuess==="property" && computerGuess==="attirbute"){
+        wins=wins++;
+        endElement.userText="WIN";
+    }
+    else if (userGuess==="element" && computerGuess==="variable" && computerGuess==="property" && computerGuess==="attribute"){
+        wins=wins++;
+        endElement.userText="WIN"
+    }
+    else if (userGuess==="attribute" && computerGuess==="element" && computerGuess==="property" && computerGuess==="varible"){
+        wins=wins++;
+        endElement.userText="WIN"
+    }
+    else if (userGuess==="property" && computerGuess==="variable" && computerGuess==="attribute" && computerGuess==="attribute"){
+        wins=wins++;
+        endElement.userText="WIN"
+    }
+    else{
+        losses=losses++;
+        endElement.textContent="LOSS"
+    }
+    
+//?//
+ guessElement.textContent="Your Guess"+userGuess;
+ computerGuessElement.textContent="Computer Guess:   " + computerGuess;
+ winsElement.textContent="Wins:   "+wins;
+ lossesElement.textContent="Losses:   "+losses;
+ }
+
+
+
+</script>
+</body>
+</html>
